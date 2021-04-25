@@ -1,0 +1,32 @@
+g++ -o ListDriver ListDriver.cpp Entry.cpp EntryNode.cpp EntryList.cpp
+EntryList.cpp: In member function 'EntryList& EntryList::operator=(const EntryList&)':
+EntryList.cpp:163:40: error: 'null' was not declared in this scope
+  163 |     for (copyPtr = el.head; copyPtr != null; copyPtr = copyPtr->getNext()){
+      |                                        ^~~~
+EntryList.cpp:164:45: error: expected ')' before ';' token
+  164 |    insert(new EntryNode(copyPtr->getEntry());
+      |          ~                                  ^
+      |                                             )
+EntryList.cpp: In member function 'bool EntryList::operator==(const EntryList&) const':
+EntryList.cpp:191:25: error: cannot convert 'EntryNode::getNext' from type 'EntryNode* (EntryNode::)() const' to type 'EntryNode*'
+  191 |      cursor1 = cursor1->getNext, cursor2 = cursor2->getNext()){
+      |                         ^~~~~~~
+EntryList.cpp:192:18: error: 'class EntryNode' has no member named 'getTerm'
+  192 |     if (cursor1->getTerm() != cursor2->getTerm()) return false;
+      |                  ^~~~~~~
+EntryList.cpp:192:40: error: 'class EntryNode' has no member named 'getTerm'
+  192 |     if (cursor1->getTerm() != cursor2->getTerm()) return false;
+      |                                        ^~~~~~~
+EntryList.cpp:193:18: error: 'class EntryNode' has no member named 'getPart'
+  193 |     if (cursor1->getPart() != cursor2->getPart()) return false;
+      |                  ^~~~~~~
+EntryList.cpp:193:40: error: 'class EntryNode' has no member named 'getPart'
+  193 |     if (cursor1->getPart() != cursor2->getPart()) return false;
+      |                                        ^~~~~~~
+EntryList.cpp:194:18: error: 'class EntryNode' has no member named 'getDefinition'
+  194 |     if (cursor1->getDefinition() != cursor2->getDefinition()) return false;
+      |                  ^~~~~~~~~~~~~
+EntryList.cpp:194:46: error: 'class EntryNode' has no member named 'getDefinition'
+  194 |     if (cursor1->getDefinition() != cursor2->getDefinition()) return false;
+      |                                              ^~~~~~~~~~~~~
+make: *** [Makefile:13: ListDriver] Error 1

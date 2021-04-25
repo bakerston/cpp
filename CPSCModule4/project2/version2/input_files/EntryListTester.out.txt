@@ -1,0 +1,132 @@
+Entry List Test program 
+added apple, list now contains: 
+	apple (noun.) red fruit 
+
+added banana, list now contains: 
+	apple (noun.) red fruit 
+	banana (noun) yellow fruit
+
+added car, list now contains: 
+	apple (noun.) red fruit 
+	banana (noun) yellow fruit
+	car (noun) automobile 
+
+added aardvark, list now contains: 
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	banana (noun) yellow fruit
+	car (noun) automobile 
+
+added avocado, list now contains: 
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	avocado (noun) green vegetable
+	banana (noun) yellow fruit
+	car (noun) automobile 
+
+added bubble, list now contains: 
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	avocado (noun) green vegetable
+	banana (noun) yellow fruit
+	bubble (noun) clear and round 
+	car (noun) automobile 
+
+added aaahhhh, list now contains: 
+	aaahhhh (noun) a screaming noise
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	avocado (noun) green vegetable
+	banana (noun) yellow fruit
+	bubble (noun) clear and round 
+	car (noun) automobile 
+
+added danger, list now contains: 
+	aaahhhh (noun) a screaming noise
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	avocado (noun) green vegetable
+	banana (noun) yellow fruit
+	bubble (noun) clear and round 
+	car (noun) automobile 
+	danger (noun)  as in stranger danger 
+
+List el contains 8 nodes
+
+Making a copy 
+and the copy contains : 
+	aaahhhh (noun) a screaming noise
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	avocado (noun) green vegetable
+	banana (noun) yellow fruit
+	bubble (noun) clear and round 
+	car (noun) automobile 
+	danger (noun)  as in stranger danger 
+
+lists el and el2 are equal
+
+el3 contains: 
+	aaahhhh (noun) a screaming noise
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	avocado (noun) green vegetable
+	banana (noun) yellow fruit
+	bubble (noun) clear and round 
+	car (noun) automobile 
+	danger (noun)  as in stranger danger 
+
+EntryList el contains danger
+
+removed danger, list now contains: 
+	aaahhhh (noun) a screaming noise
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	avocado (noun) green vegetable
+	banana (noun) yellow fruit
+	bubble (noun) clear and round 
+	car (noun) automobile 
+
+
+ avocado found at: avocado (noun) green vegetable
+
+removed banana, list now contains: 
+	aaahhhh (noun) a screaming noise
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	avocado (noun) green vegetable
+	bubble (noun) clear and round 
+	car (noun) automobile 
+
+
+removed aaahhhh, list now contains: 
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	avocado (noun) green vegetable
+	bubble (noun) clear and round 
+	car (noun) automobile 
+
+removed bubble, list now contains: 
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	avocado (noun) green vegetable
+	car (noun) automobile 
+
+removed avocado, list now contains: 
+	aardvark (noun) anteater
+	apple (noun.) red fruit 
+	car (noun) automobile 
+
+removed apple, list now contains: 
+	aardvark (noun) anteater
+	car (noun) automobile 
+
+list el is not empty
+list el now contains 2 nodes 
+
+removed aardvark, list now contains: 
+	car (noun) automobile 
+
+removed car, list now contains: 
+Empty list 
+

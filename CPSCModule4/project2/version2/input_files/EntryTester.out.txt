@@ -1,0 +1,16 @@
+a is apple (noun) edible red fruit
+b is banana (noun) edible yellow fruit
+c is carrot (noun) edible orange vegetable
+d is carrot (noun) enticement, as opposed to a stick 
+Does the Entry class  == operator consider c and d the same?
+Yes, it does.
+
+e is apple (noun) edible red fruit
+all fields of a and e are equal
+
+not all fields of e and d are equal
+
+banana is less than carrot
+banana is less than or equal to carrot
+banana is not greater than carrot
+banana is not greater than or equal to carrot

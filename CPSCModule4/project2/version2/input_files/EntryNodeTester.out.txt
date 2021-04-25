@@ -1,0 +1,22 @@
+First, the entries: 
+a is apple (noun) edible red fruit
+b is banana (noun) edible yellow fruit
+c is carrot (noun) edible orange vegetable
+d is carrot (noun) enticement, as opposed to a stick 
+e is eggplant (noun) purple vegetable with seeds
+
+Now, the nodes: 
+aNode has apple (noun) edible red fruit and points to 0
+bNode has banana (noun) edible yellow fruit and points to 0x7fff7ce3e200
+cNode has carrot (noun) edible orange vegetable and points to 0
+dNode has carrot (noun) edible orange vegetable and points to 0
+eNodePtr points to eggplant (noun) purple vegetable with seeds and points to 0
+fNode has carrot (noun) edible orange vegetable and points to 0
+
+And now the linked list of nodes: 
+node 0: apple
+node 1: banana
+node 2: carrot
+node 3: carrot
+node 4: eggplant
+node 5: carrot
