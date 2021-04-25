@@ -3,6 +3,8 @@
 #include "BinarySearchTree.h"
 using namespace std;
 
+#define cnt 10
+
 // the search tree maintains the number of nodes in the tree (count)
 // and a pointer to the root of the tree
 // the initial tree points to nullptr and has count=0 
@@ -45,51 +47,46 @@ void BinarySearchTree::insertItem(int it) {
 // --> You need to implement this method
 bool BinarySearchTree::insertItem(BSTNode *newNode) {
 	// get the value from node provided as a parameter
-	int val = newNode->getElement();
+	int val = newNode->getElement();;
 	// check if the tree is empty 
    // if so, update count and make this the root
-	if (root == nullptr)
-	{
-		root->setElement(val);
-		return;
+	if (root == nullptr){			
+		root = newNode;	
+		return true;
 	}
-	else
-	{
+	else{
+		bool Found = true;
 		BSTNode *cur = root;
-		while (true)
-		{
-			if (newNode->getElement() > cur->getElement())
-			{
-				if(cur->getRight() != nullptr)
-				{
+		while (Found){
+			if (val > cur->getElement()){
+				if(cur->getRight() != nullptr){
 					cur = cur->getRight();
 				}
-				else
-				{
+				else{
 					cur->setRight(newNode);
 					newNode->setParent(cur);
-					return true;
+					Found = false;
 				}
+				count++;
 			}
-			else if (newNode->getElement() < cur->getElement())
-			{
-				if(cur->getLeft() != nullptr)
-				{
+			else if (val < cur->getElement()){
+				if(cur->getLeft() != nullptr){
 					cur = cur->getLeft();
+					count++;
 				}
-				else
-				{
+				else{
 					cur->setLeft(newNode);
 					newNode->setParent(cur);
-					return true;
+					Found = false;
 				}
+				count++;
 			}
-			else
-			{
-				cout << "Empty" << endl;
-				return false;
+			else{
+				cout << "duplicate" << endl;
+				Found = false;
 			}
 		}
+		return true;
 
 	}
 	// if the tree is not empty, then search for the location
@@ -185,7 +182,7 @@ bool BinarySearchTree::deleteItem(int it) {
 		//get a temp pointer to the current node
 		BSTNode *hold = curr;
 		//direct curr to the right child
-		curr = curr->getRight() ;
+		curr = curr->getRight();
 		//find the leftmost child node of the right subtree
 		while ( curr->getLeft()!=nullptr ) 
 			curr = curr->getLeft();
@@ -317,7 +314,18 @@ void BinarySearchTree::display(){
 // uses level parameter to indent accordingly
 // --> you need to implement this method
 void BinarySearchTree::display(BSTNode *ptr, int level){
-
 	// for you to implement ....
+	if (ptr == nullptr){
+		return;
+	}
+	level += cnt;
+	display(ptr->getRight(), level);
+	cout << endl;
+	for (int i = cnt; i < level; i++){
+		cout << " ";
+	}
+	cout << ptr->getElement()<<"\n";
+	display(ptr->getLeft(), level);
+
 
 };

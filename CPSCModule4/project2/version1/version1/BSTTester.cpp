@@ -18,7 +18,7 @@ int main(){
 	cout << endl << endl;
 
 	cout << "Inserting 2 and then 13: "<< endl;
-	bst.insertItem(2);
+	//bst.insertItem(2);
 	bst.insertItem(13);
 	cout << "-----------------------" << endl;
 	bst.display();
@@ -116,5 +116,6 @@ int main(){
 	cout << endl << endl;
 	cout << endl;
 	
-	
+
+
 }
