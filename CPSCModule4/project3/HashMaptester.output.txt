@@ -1,0 +1,37 @@
+After first 3 insertions the hash table contains: 
+0: 
+1: 
+2: 
+3: apple -> car ->  nullptr
+4: banana ->  nullptr
+
+After next 3 insertions the hash table contains: 
+0: aardvark ->  nullptr
+1: 
+2: avocado -> bubble ->  nullptr
+3: apple -> car ->  nullptr
+4: banana ->  nullptr
+
+After next 4 more insertions the hash table contains: 
+0: aardvark ->  nullptr
+1: scream ->  nullptr
+2: avocado -> bubble ->  nullptr
+3: apple -> car -> aaahhhh ->  nullptr
+4: banana -> danger -> run ->  nullptr
+
+danger (noun) as in stranger danger
+stranger not found
+After deleting banana and aaahhhh
+0: aardvark ->  nullptr
+1: scream ->  nullptr
+2: avocado -> bubble ->  nullptr
+3: apple -> car ->  nullptr
+4: danger -> run ->  nullptr
+
+After deleting bubble and avocado
+0: aardvark ->  nullptr
+1: scream ->  nullptr
+2: 
+3: apple -> car ->  nullptr
+4: danger -> run ->  nullptr
+
