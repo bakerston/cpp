@@ -12,8 +12,7 @@ using namespace std;
  * to the next entry in the list.
  */
 
-// constructor initialize table size and counter
-// then creates table of nullptr entries
+
 HashMap::HashMap(int sz):table_size(sz),counter(0){
 	table = new LinkedHashEntry*[table_size];
 	for (int i=0; i < table_size; i++){
@@ -21,8 +20,7 @@ HashMap::HashMap(int sz):table_size(sz),counter(0){
 	}
 }
 
-// destructor iterates through the table
-// and traverses each list, deleting the nodes in the list 
+
 HashMap::~HashMap(){
 	for (int i=0; i<table_size; i++){
 		if (table[i] != nullptr){
@@ -38,12 +36,10 @@ HashMap::~HashMap(){
 	delete[] table;
 }
 
-// returns number of entries in the hash table
 int HashMap::size(){
 	return counter;
 }
 
-// a reasonabe hash code function
 int HashMap::myHashCode(const string &str)
 {
 	unsigned hash = HASH_SEED;
@@ -55,7 +51,7 @@ int HashMap::myHashCode(const string &str)
 	return (hash & HASH_MASK);
 }
 
-// for your debugging pleasure
+
 void HashMap::display()
 {
 
@@ -124,10 +120,7 @@ bool HashMap::insertItem(Entry *ent)
 	return true;
 
 
-	// if so, return false	
-	// otherwise, add a new LinkedHashEntry containing that Entry
-	// at the end of the list
-	// don't forget to increment counter and return true
+
 }
 
 
@@ -139,15 +132,12 @@ Entry* HashMap::findItem(string key)
 	int val = myHashCode(key);
 	val = val % table_size;
 
-	// if that bucket is empty, return nullptr
 	if (table[val] == nullptr)
 	{
 		return nullptr;
 	}
 
-	// otherwise, iterate through the list for that bucket
-	// and return the entry if you find it, or nullptr 
-   // if you don't
+
    else
    {
 	   LinkedHashEntry *cur = table[val];
@@ -176,11 +166,7 @@ void HashMap::deleteItem(string key)
 	{
 		return;
 	}
-	// if the bucket for that hash is not empty
-	// traverse the list until you find the entry with the desired key
-    // and then splice it out and delete it
-	// Consider the same cases as when you implemented the linked list
-	// Suggest using leading and trailing cursors ...
+
 	Entry *d = new Entry("a", "a", "a");
 	LinkedHashEntry *dummy = new LinkedHashEntry(d);
 
